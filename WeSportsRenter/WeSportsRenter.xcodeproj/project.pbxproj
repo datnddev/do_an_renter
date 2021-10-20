@@ -13,6 +13,11 @@
 		ABF2FF1A271EFEAB00CEBBFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF2FF18271EFEAB00CEBBFE /* Main.storyboard */; };
 		ABF2FF1C271EFEAD00CEBBFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABF2FF1B271EFEAD00CEBBFE /* Assets.xcassets */; };
 		ABF2FF1F271EFEAD00CEBBFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABF2FF1D271EFEAD00CEBBFE /* LaunchScreen.storyboard */; };
+		ABF2FF2C271F08FB00CEBBFE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2FF2B271F08FB00CEBBFE /* CustomTextField.swift */; };
+		ABF2FF31271F3E5E00CEBBFE /* SplashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2FF2F271F3E5E00CEBBFE /* SplashCollectionViewCell.swift */; };
+		ABF2FF32271F3E5E00CEBBFE /* SplashCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF2FF30271F3E5E00CEBBFE /* SplashCollectionViewCell.xib */; };
+		ABF2FF34271F3E7E00CEBBFE /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2FF33271F3E7E00CEBBFE /* SplashViewController.swift */; };
+		ABF2FF37271F475D00CEBBFE /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF2FF36271F475D00CEBBFE /* SplashModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		ABF2FF1B271EFEAD00CEBBFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABF2FF1E271EFEAD00CEBBFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ABF2FF20271EFEAD00CEBBFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABF2FF2B271F08FB00CEBBFE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ABF2FF2F271F3E5E00CEBBFE /* SplashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABF2FF30271F3E5E00CEBBFE /* SplashCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABF2FF33271F3E7E00CEBBFE /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		ABF2FF36271F475D00CEBBFE /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				ABF2FF16271EFEAB00CEBBFE /* MainViewController.swift */,
+				ABF2FF33271F3E7E00CEBBFE /* SplashViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -88,6 +99,8 @@
 		ABF2FF28271F00FD00CEBBFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABF2FF2D271F3C8700CEBBFE /* Cell */,
+				ABF2FF2B271F08FB00CEBBFE /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -95,8 +108,26 @@
 		ABF2FF29271F010300CEBBFE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ABF2FF36271F475D00CEBBFE /* SplashModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		ABF2FF2D271F3C8700CEBBFE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2FF2E271F3C9000CEBBFE /* CollectionViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABF2FF2E271F3C9000CEBBFE /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2FF2F271F3E5E00CEBBFE /* SplashCollectionViewCell.swift */,
+				ABF2FF30271F3E5E00CEBBFE /* SplashCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +190,7 @@
 				ABF2FF1F271EFEAD00CEBBFE /* LaunchScreen.storyboard in Resources */,
 				ABF2FF1C271EFEAD00CEBBFE /* Assets.xcassets in Resources */,
 				ABF2FF1A271EFEAB00CEBBFE /* Main.storyboard in Resources */,
+				ABF2FF32271F3E5E00CEBBFE /* SplashCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +201,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF2FF31271F3E5E00CEBBFE /* SplashCollectionViewCell.swift in Sources */,
+				ABF2FF2C271F08FB00CEBBFE /* CustomTextField.swift in Sources */,
 				ABF2FF17271EFEAB00CEBBFE /* MainViewController.swift in Sources */,
+				ABF2FF34271F3E7E00CEBBFE /* SplashViewController.swift in Sources */,
+				ABF2FF37271F475D00CEBBFE /* SplashModel.swift in Sources */,
 				ABF2FF13271EFEAB00CEBBFE /* AppDelegate.swift in Sources */,
 				ABF2FF15271EFEAB00CEBBFE /* SceneDelegate.swift in Sources */,
 			);

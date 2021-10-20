@@ -3,28 +3,99 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WeSportsRenter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="WeSportsRenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eLi-HP-s9D">
+                                <rect key="frame" x="0.0" y="44" width="414" height="537.5"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XcT-Pp-4CI">
+                                    <size key="itemSize" width="414" height="626"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jsX-DN-QPj">
+                                <rect key="frame" x="146" y="597.5" width="122" height="28"/>
+                                <color key="pageIndicatorTintColor" red="0.93552935120000003" green="0.62710547449999998" blue="0.2294735014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTO-lk-TMb" userLabel="skipLabel">
+                                <rect key="frame" x="20" y="796" width="60" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL7-or-z10" userLabel="nextButton">
+                                <rect key="frame" x="334" y="782" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.93552935120000003" green="0.62710547449999998" blue="0.2294735014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0Rt-bD-Jvk"/>
+                                    <constraint firstAttribute="height" constant="60" id="ZBY-2x-u82"/>
+                                </constraints>
+                                <state key="normal" image="icon8.right"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="PrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="jsX-DN-QPj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1RA-OI-xnj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LL7-or-z10" secondAttribute="bottom" constant="20" id="2i2-3r-In7"/>
+                            <constraint firstItem="eLi-HP-s9D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Bq-2a-WQG"/>
+                            <constraint firstItem="jsX-DN-QPj" firstAttribute="top" secondItem="eLi-HP-s9D" secondAttribute="bottom" constant="16" id="5cH-lB-zZa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LL7-or-z10" secondAttribute="trailing" constant="20" id="5uV-Bm-Uuq"/>
+                            <constraint firstItem="eLi-HP-s9D" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="98V-TM-Md3"/>
+                            <constraint firstItem="eLi-HP-s9D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BRI-2E-VLy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLi-HP-s9D" secondAttribute="trailing" id="P6W-qd-VWx"/>
+                            <constraint firstItem="qTO-lk-TMb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bY4-Ha-zjC"/>
+                            <constraint firstItem="qTO-lk-TMb" firstAttribute="bottom" secondItem="LL7-or-z10" secondAttribute="bottom" constant="-10" id="efn-VI-Zdw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="splashCollectionView" destination="eLi-HP-s9D" id="yMj-Dl-l8L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="75"/>
+            <point key="canvasLocation" x="56.521739130434788" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7gr-ek-225">
+            <objects>
+                <viewController id="NhF-tT-x5k" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TPz-2A-owf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rSY-h6-lec"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sh8-lb-mm1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095" y="93"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icon8.right" width="25" height="25"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.12941176470588237" green="0.10196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
